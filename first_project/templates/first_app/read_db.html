@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Djando level 2</title>
+    <link rel="stylesheet" href="{% static "css/mystyle.css" %}">  <!-- linking css-->
+  </head>
+  <body>
+  <h1>Welcome to django level 2</h1>
+  <h2>here are your access records</h2>
+
+  <div class="djangtwo" >
+    {% if access_records %}   <!-- checking if access records are present or nt-->
+    <table>
+
+      <thead>
+        <th>Site Name</th>
+        <th>Date accessed</th>
+      </thead>
+
+    {% for rec in access_records %}   <!-- reading the list now form the DB -->
+
+    <tr>
+      <td>{{ rec.name}}</td>
+      <td>{{ rec.date}}</td>
+    </tr>
+
+    {% endfor %}  <!-- ending for--->
+   </table>
+
+   {% else %}     <!-- else for if--->
+
+   <p>NO RECORDS FOUND !!!!</p>
+
+   {% endif %}   <!-- ending ifelse--->
+
+
+  </div>
+  </body>
+</html>

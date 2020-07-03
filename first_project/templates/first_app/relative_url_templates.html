@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TEMPLATE TAGGING</title>
+  </head>
+  <body>
+    <h1>WELCOME TO RELATIVE URL TEMPLATES</h1>
+    <ul>
+    <li>  <a href="{% url 'first_app:other' %}">The Other Page</a>  <!-- LEAVE NO SPACE INSIDE SINGLE QUOTES --></li>
+    <li><a href="{% url 'admin:index' %}">ADMIN</a>   <!-- it requires migrating once sometimes --></li>
+    <li><a href="{% url 'index'%}">INDEX</a></li>
+
+
+    
+
+    </ul>
+  </body>
+</html>
